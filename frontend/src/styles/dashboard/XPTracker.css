@@ -1,0 +1,95 @@
+.xp-tracker {
+  background: rgba(13, 17, 23, 0.8);
+  border-radius: 15px;
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  margin-bottom: 2rem;
+}
+
+.xp-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.trophy-icon {
+  font-size: 1.5rem;
+  color: #ffcc00;
+  filter: drop-shadow(0 0 5px rgba(255, 204, 0, 0.5));
+}
+
+.xp-header h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(0, 255, 242, 0.5);
+}
+
+.xp-progress {
+  margin-bottom: 1.5rem;
+}
+
+.xp-bar-container {
+  position: relative;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.xp-bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #00fff2, #ff00ff);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 242, 0.5);
+}
+
+.xp-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.milestones-button {
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.milestones-button:hover {
+  background: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 255, 242, 0.3);
+}
+
+@media (max-width: 768px) {
+  .xp-tracker {
+    padding: 1rem;
+  }
+
+  .xp-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .xp-text {
+    font-size: 0.8rem;
+  }
+} 

@@ -1,0 +1,80 @@
+.contact-container {
+    max-width: 600px;
+    margin: 5rem auto;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    border: 2px solid #0affef;
+    border-radius: 10px;
+  }
+  
+  .contact-container h2 {
+    text-align: center;
+    color: #39ff14;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .contact-container input,
+  .contact-container textarea {
+    padding: 0.75rem;
+    border: 2px solid #39ff14;
+    background-color: #000;
+    color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  .contact-container input:focus,
+  .contact-container textarea:focus {
+    outline: none;
+    border-color: #0affef;
+    box-shadow: 0 0 0 2px rgba(10, 255, 239, 0.2);
+  }
+  
+  .contact-container button {
+    background-color: #0affef;
+    color: #000;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-container button:hover:not(:disabled) {
+    background-color: #39ff14;
+    transform: translateY(-2px);
+  }
+  
+  .contact-container button:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  
+  .status-message {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .status-message.error {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid #ff0000;
+    color: #ff0000;
+  }
+  
+  .status-message.success {
+    background-color: rgba(57, 255, 20, 0.1);
+    border: 1px solid #39ff14;
+    color: #39ff14;
+  }
+  

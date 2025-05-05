@@ -1,0 +1,158 @@
+.profile-setup-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  padding: 2rem;
+}
+
+.profile-setup-box {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #0affef;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(10, 255, 239, 0.2);
+}
+
+.profile-setup-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-setup-header h2 {
+  color: #0affef;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px rgba(10, 255, 239, 0.5);
+}
+
+.profile-setup-header p {
+  color: #39ff14;
+  font-size: 1rem;
+}
+
+.profile-setup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  color: #0affef;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Fix for input styling - using more specific selectors */
+.profile-setup-form .form-group input,
+.profile-setup-form .form-group select,
+.profile-setup-form input[type="number"],
+.profile-setup-form select {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.6) !important;
+  border: 2px solid #39ff14 !important;
+  border-radius: 5px;
+  color: #fff !important;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.profile-setup-form .form-group input:focus,
+.profile-setup-form .form-group select:focus,
+.profile-setup-form input:focus,
+.profile-setup-form select:focus {
+  outline: none;
+  border-color: #0affef !important;
+  box-shadow: 0 0 10px rgba(10, 255, 239, 0.3);
+}
+
+.profile-setup-form .form-group input::placeholder,
+.profile-setup-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.profile-setup-form .form-group select {
+  cursor: pointer;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #0affef 50%),
+                    linear-gradient(135deg, #0affef 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+                     calc(100% - 15px) calc(1em + 2px);
+  background-size: 5px 5px,
+                  5px 5px;
+  background-repeat: no-repeat;
+}
+
+.error-message {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  padding: 0.75rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.submit-button {
+  background: linear-gradient(45deg, #39ff14, #0affef);
+  color: #000;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(10, 255, 239, 0.5);
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Grid layout for form fields */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* Full width fields */
+.form-grid .full-width {
+  grid-column: 1 / -1;
+} 

@@ -1,0 +1,211 @@
+.weekly-summary {
+  padding: 1.5rem;
+  background: rgba(16, 20, 24, 0.8);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.weekly-summary h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.warrior-info {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.warrior-info h2 {
+  color: #00fff2;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.level-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.level {
+  color: #ff00ff;
+  font-size: 1.2rem;
+  min-width: 80px;
+  white-space: nowrap;
+}
+
+.xp-bar-container {
+  position: relative;
+  flex: 1;
+  max-width: 300px;
+}
+
+.xp-bar {
+  width: 100%;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.xp-progress {
+  height: 100%;
+  transition: width 0.3s ease;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #00fff2 0%, #ff00ff 100%);
+}
+
+.xp-text {
+  color: #00fff2;
+  font-size: 1.1rem;
+  min-width: 120px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.next-level {
+  color: #9933ff;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-content h3 {
+  color: #ffffff;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  opacity: 0.7;
+}
+
+.stat-value {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove any XP-related styles from stat cards */
+.stat-card .xp-text,
+.stat-card .xp-value,
+.stat-card [class*="xp"] {
+  display: none;
+}
+
+/* Sleep Quality Chart Styles */
+.sleep-quality-chart {
+  margin-top: 2rem;
+}
+
+.sleep-quality-donut {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.sleep-quality-segment {
+  fill: none;
+  stroke-width: 30;
+}
+
+.sleep-quality-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+}
+
+.sleep-quality-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .warrior-info h2 {
+    font-size: 1.5rem;
+  }
+  
+  .level {
+    font-size: 1rem;
+  }
+  
+  .xp-bar-container {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .level-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .xp-bar-container {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  
+  .xp-text {
+    text-align: center;
+  }
+} 
